@@ -8,7 +8,27 @@ export default {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      'animation': {
+        'text': 'text 5s ease infinite',
+      },
+      'keyframes': {
+        text: {
+          '0%': {
+            backgroundSize: '300%',
+            backgroundPosition: '0% 50%'
+          },
+          '50%': {
+            backgroundSize: '300%',
+            backgroundPosition: '100% 50%'
+          },
+          '100%': {
+            backgroundSize: '300%',
+            backgroundPosition: '0% 50%'
+          }
+        }
+      }
+    },
   },
   plugins: [
     flowbite,
