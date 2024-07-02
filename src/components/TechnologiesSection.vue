@@ -1,0 +1,56 @@
+<template>
+  <div class="text-5xl font-bold text-white my-10">Technologies I use</div>
+  <div class="container flex flex-wrap justify-center gap-8 text-center cursor-default">
+    <div
+      v-for="(item, index) in technologies"
+      v-bind:key="index"
+      class="p-4 bg-slate-900 text-xl text-white rounded-xl hover:font-semibold transition-transform duration-300 hover:scale-110"
+    >
+      <p>{{ item.title }}</p>
+    </div>
+  </div>
+</template>
+
+<script setup>
+const technologies = [
+  {
+    title: 'HTML5'
+  },
+  {
+    title: 'CSS3'
+  },
+  {
+    title: 'JavaScript'
+  },
+  {
+    title: 'Node.js'
+  },
+  {
+    title: 'TypeScript'
+  },
+  {
+    title: 'Angular'
+  },
+  {
+    title: 'Vue'
+  },
+  {
+    title: 'TailwindCSS'
+  },
+  {
+    title: 'MySQL'
+  },
+  {
+    title: 'SQL Server'
+  },
+  {
+    title: 'MongoDB'
+  },
+  {
+    title: 'Git'
+  },
+  {
+    title: 'Github'
+  }
+];
+</script>
