@@ -22,7 +22,7 @@
     <div class="p-6 flex flex-col h-full">
       <div class="text-center mb-6">
         <div class="text-3xl font-black text-black transition duration-300 hover:text-slate-50">
-          <a href="#!" rel="noreferrer">{{ project.title }}</a>
+          <a :href="project.link" target="_blank">{{ project.title }}</a>
         </div>
       </div>
       <div class="text-center text-gray-500 whitespace-pre-line mb-6">
@@ -42,6 +42,4 @@
 </template>
 <script setup>
 const props = defineProps(['project']);
-
-console.log(props.project);
 </script>
