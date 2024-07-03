@@ -1,5 +1,5 @@
 <template>
-  <div class="text-5xl font-bold text-white mb-6">About me</div>
+  <div v-motion-slide-visible-left class="text-5xl font-bold text-white mb-6">About me</div>
   <div class="p-8 bg-slate-900 rounded-xl">
     <div class="rounded-xl flex items-center space-x-6">
       <div class="p-1 bg-slate-800 rounded-full">

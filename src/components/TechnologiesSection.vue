@@ -1,7 +1,11 @@
 <template>
-  <div class="text-5xl font-bold text-white my-10">Technologies I use</div>
+  <div v-motion-slide-visible-left class="text-5xl font-bold text-white my-10">
+    Technologies I use
+  </div>
   <div class="container flex flex-wrap justify-center gap-8 text-center cursor-default">
     <div
+      v-motion-pop-visible
+      :delay="50 * index"
       v-for="(item, index) in technologies"
       v-bind:key="index"
       class="p-4 bg-slate-900 text-xl text-white rounded-xl hover:font-semibold transition-transform duration-300 hover:scale-110"
