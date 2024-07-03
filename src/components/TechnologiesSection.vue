@@ -1,5 +1,5 @@
 <template>
-  <div v-motion-slide-visible-left class="text-5xl font-bold text-white my-10">
+  <div v-motion-slide-visible-left class="text-5xl font-bold text-white mb-6">
     Technologies I use
   </div>
   <div class="container flex flex-wrap justify-center gap-8 text-center cursor-default">
