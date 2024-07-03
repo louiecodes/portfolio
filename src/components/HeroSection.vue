@@ -1,19 +1,21 @@
 <template>
   <div class="text-5xl font-bold text-white text-center">
-    <div v-motion-slide-bottom :delay="300" :duration="500">
+    <div v-motion-slide-visible-once-bottom :delay="300" :duration="500">
       Hi, I'm
       <span
         class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-pink-500 to-purple-500 animate-text"
         >Louis</span
       >.
     </div>
-    <div v-motion-slide-bottom :delay="1000" :duration="500">A developer & digital artist.</div>
-    <div v-motion-slide-bottom :delay="2000" :duration="500">
+    <div v-motion-slide-visible-once-bottom :delay="1000" :duration="500">
+      A developer & digital artist.
+    </div>
+    <div v-motion-slide-visible-once-bottom :delay="2000" :duration="500">
       Passionate about creating and learning.
     </div>
 
     <div
-      v-motion-pop-visible
+      v-motion-pop-visible-once
       :delay="4000"
       :duration="500"
       class="relative inline-flex group mt-16"
