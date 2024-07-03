@@ -39,11 +39,11 @@
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
         >
           <li v-for="(item, index) in menuItems" v-bind:key="index">
-            <a
-              :href="item.link"
+            <router-link
+              :to="item.link"
               class="block py-2 pl-3 pr-4 text-white rounded md:hover:text-cyan-500 md:p-0"
               aria-current="page"
-              >{{ item.title }}</a
+              >{{ item.title }}</router-link
             >
           </li>
         </ul>
