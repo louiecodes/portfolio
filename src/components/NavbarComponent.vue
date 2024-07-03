@@ -56,23 +56,23 @@
 const menuItems = [
   {
     title: 'Home',
-    link: '#!'
+    link: '#home'
   },
   {
     title: 'Projects',
-    link: '#!'
+    link: '#projects'
   },
   {
     title: 'Technologies',
-    link: '#!'
+    link: '#tech'
   },
   {
     title: 'About',
-    link: '#!'
+    link: '#about'
   },
   {
     title: 'Contact',
-    link: '#!'
+    link: '#contact'
   }
 ];
 </script>
