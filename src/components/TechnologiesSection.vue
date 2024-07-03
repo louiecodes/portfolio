@@ -29,6 +29,9 @@ const technologies = [
     title: 'TypeScript'
   },
   {
+    title: 'NestJS'
+  },
+  {
     title: 'Angular'
   },
   {
