@@ -8,7 +8,7 @@ import TechnologiesSection from '@/components/TechnologiesSection.vue';
 
 <template>
   <!-- Hero Section -->
-  <section class="md:py-64 py-40" id="home">
+  <section class="min-h-screen flex justify-center items-center" id="home">
     <HeroSection />
   </section>
   <!-- Hero Section -->
