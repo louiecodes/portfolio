@@ -19,7 +19,7 @@ onMounted(() => {
     <main>
       <RouterView />
     </main>
-    <footer>
+    <footer class="pt-40">
       <FooterComponent />
     </footer>
   </div>
