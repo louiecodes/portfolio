@@ -4,8 +4,7 @@
     <div class="rounded-xl flex items-center space-x-6">
       <div class="p-1 bg-slate-800 rounded-full">
         <div class="p-1 bg-gradient-to-br from-fuchsia-500 to-cyan-400 rounded-full">
-          <!-- <img class="h-16 w-16 rounded-full" src="/avatar.png" alt="A_photo_of_Louie" /> -->
-          <span class="h-16 w-16 rounded-full">👽</span>
+          <img class="h-16 w-16 rounded-full" src="@/assets/avatar.png" alt="A_photo_of_Louie" />
         </div>
       </div>
       <div>
