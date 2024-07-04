@@ -5,11 +5,11 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white rounded-xl bg-slate-500 backdrop-filter backdrop-blur-lg bg-opacity-30"
     >
-      <a href="#!" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <router-link to="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
         <!-- <img src="logo.svg" class="h-8" alt="Louie Logo" /> -->
         <span class="text-2xl">🛸</span>
         <span class="self-center text-2xl font-medium whitespace-nowrap">Louie</span>
-      </a>
+      </router-link>
       <button
         data-collapse-toggle="navbar-default"
         type="button"
@@ -41,7 +41,8 @@
           <li v-for="(item, index) in menuItems" v-bind:key="index">
             <router-link
               :to="item.link"
-              class="block py-2 pl-3 pr-4 text-white rounded md:hover:text-cyan-500 md:p-0"
+              :class="route.hash === item.link ? 'bg-gray-600' : ''"
+              class="block py-2 pl-3 pr-4 text-white rounded-lg md:hover:text-cyan-500"
               aria-current="page"
               >{{ item.title }}</router-link
             >
@@ -53,6 +54,10 @@
 </template>
 
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
 const menuItems = [
   {
     title: 'Home',
