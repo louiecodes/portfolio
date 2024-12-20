@@ -15,8 +15,8 @@
     <p class="text-slate-700 flex justify-center my-10">Copyright {{ date.getFullYear() }}</p>
   </div>
 </template>
-<script setup>
-import SocialIcon from './SocialIcon.vue';
+<script setup lang="ts">
+import SocialIcon from '@/components/SocialIcon.vue';
 
 const date = new Date();
 

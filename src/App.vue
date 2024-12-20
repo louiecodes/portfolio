@@ -2,8 +2,8 @@
 import { initFlowbite } from 'flowbite';
 import { onMounted } from 'vue';
 import { RouterView } from 'vue-router';
-import FooterComponent from './components/FooterComponent.vue';
-import NavbarComponent from './components/NavbarComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+import NavbarComponent from '@/components/NavbarComponent.vue';
 
 // initialize components based on data attribute selectors
 onMounted(() => {

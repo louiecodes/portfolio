@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const technologies = [
   {
     title: 'HTML5'

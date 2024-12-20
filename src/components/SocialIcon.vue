@@ -2,11 +2,11 @@
   <component :is="icon" class="icon" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
-import InstagramIcon from './icons/InstagramIcon.vue';
-import GithubIcon from './icons/GithubIcon.vue';
-import LinkedInIcon from './icons/LinkedInIcon.vue';
+import InstagramIcon from '@/components/icons/InstagramIcon.vue';
+import GithubIcon from '@/components/icons/GithubIcon.vue';
+import LinkedInIcon from '@/components/icons/LinkedInIcon.vue';
 
 const props = defineProps({
   title: {
