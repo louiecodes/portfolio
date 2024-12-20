@@ -28,10 +28,6 @@ const socialLinks = [
   {
     title: 'github',
     link: 'https://github.com/louiecodes'
-  },
-  {
-    title: 'linkedin',
-    link: '#!'
   }
 ];
 </script>
