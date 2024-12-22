@@ -1,7 +1,7 @@
 <template>
   <div v-motion-slide-visible-left class="text-5xl font-bold text-white mb-6">About me</div>
   <div class="p-8 bg-slate-900 rounded-xl">
-    <div class="rounded-xl flex items-center space-x-6">
+    <div class="rounded-xl flex items-center space-x-6" v-motion-pop-visible :delay="300">
       <div class="p-1 bg-slate-800 rounded-full">
         <div class="p-1 bg-gradient-to-br from-fuchsia-500 to-cyan-400 rounded-full">
           <img class="h-16 w-16 rounded-full" src="@/assets/avatar.png" alt="A_photo_of_Louie" />
@@ -12,7 +12,7 @@
         <p class="text-xl text-slate-500">Fullstack Developer</p>
       </div>
     </div>
-    <div class="text-xl text-white mt-6 mb-10">
+    <div v-motion-slide-visible-bottom :delay="300" class="text-xl text-white mt-6 mb-10">
       <p>
         Hi there! My name is Louis and I am a fullstack developer graduated in Computer Science.
       </p>
