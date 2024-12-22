@@ -32,7 +32,7 @@ import TechnologiesSection from '@/components/TechnologiesSection.vue';
   <!-- About Section -->
 
   <!-- Contact Section -->
-  <section class="py-10" id="contact">
+  <section class="py-10 overflow-hidden" id="contact">
     <ContactSection />
   </section>
   <!-- Contact Section -->
