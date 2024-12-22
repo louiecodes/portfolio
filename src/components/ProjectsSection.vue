@@ -20,23 +20,26 @@ import ProjectCard from '@/components/ProjectCard.vue';
 const projects = [
   {
     title: 'Webmenu',
-    description: 'A digital menu and delivery app for restaurants and food shops.',
+    description:
+      'A digital menu and QR solution that helps restaurants and food shops go paperless, ensuring hygiene, instant updates, and an eco-friendly approach.',
     technologies: ['Laravel', 'Framework7', 'MySQL'],
     link: 'https://www.webmenu.com.ar/info.html',
     background: 'bg-gradient-to-r from-yellow-100 to-rose-200'
   },
   {
     title: 'Webturno',
-    description: 'Web and mobile app for doctors and patients appointment management',
-    technologies: ['Angular', 'Framework7', 'Vue.js'],
-    link: 'https://www.webturno.com.ar/info.html',
+    description:
+      'A web and mobile platform that streamlines appointment management for doctors and patients, featuring electronic medical records, notifications, and 24/7 online booking.',
+    technologies: ['Vue.js', 'Capacitor.js', 'Typescript'],
+    link: 'https://webturno.com.ar/c/profesionales.html',
     background: 'bg-gradient-to-r from-emerald-50 to-sky-200'
   },
   {
-    title: 'Real Estate',
-    description: 'Web for real estate',
-    technologies: ['Nuxt', 'Typescript'],
-    link: 'https://www.nessi.com.ar/',
+    title: 'Webinfo',
+    description:
+      'An app designed to create personalized digital spaces with QR codes, perfect for quickly organizing and sharing information in a visual way.',
+    technologies: ['NestJS', 'Vue.js', 'Typescript', 'MySQL'],
+    link: 'https://www.webinfo.com.ar/',
     background: 'bg-gradient-to-r from-lime-200 to-yellow-100'
   }
 ];
