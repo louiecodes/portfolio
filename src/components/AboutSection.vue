@@ -11,21 +11,27 @@
       </div>
       <div>
         <div class="text-3xl font-medium text-white">Louie</div>
-        <p class="text-xl text-slate-500">Fullstack Developer</p>
+        <p class="text-xl text-slate-500">Full Stack Developer</p>
       </div>
     </div>
     <div v-motion-slide-visible-bottom :delay="1000" class="text-xl text-white mt-6 mb-10">
       <p>
-        Hi there! My name is Louis and I am a fullstack developer graduated in Computer Science.
+        Hi there! My name is Louis and I am a full stack developer graduated in Software
+        Development.
+      </p>
+      <br />
+      <p>
+        Throughout my career, I've worked on a wide range of projects, from simple websites to
+        complex web applications.
       </p>
       <p>
-        During my carreer, I have had the opportunity to work on a variety of projects, from simple
-        websites to complex web applications. I am a reliable and detail-oriented team player, and I
-        am always eager to take on new challenges and solve problems creatively.
+        I'm a <i>reliable</i>, <i>detail-oriented</i> team player who loves tackling new challenges
+        and solving problems with creativity.
       </p>
+      <br />
       <p>
-        I am excited to continue learning and growing as a developer, and I am always open to new
-        opportunities to collaborate and create meaningful projects.
+        I thrive on collaboration and building solutions that make a difference. Let's create
+        something extraordinary together!
       </p>
     </div>
   </div>
