@@ -6,8 +6,7 @@
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white rounded-xl bg-slate-500 backdrop-filter backdrop-blur-lg bg-opacity-30"
     >
       <router-link to="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <!-- <img src="logo.svg" class="h-8" alt="Louie Logo" /> -->
-        <span class="text-2xl">🛸</span>
+        <img src="@/assets/logo.png" class="h-8 rounded-full" alt="Louie Logo" />
         <span class="self-center text-2xl font-medium whitespace-nowrap">Louie</span>
       </router-link>
       <button
