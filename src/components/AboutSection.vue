@@ -6,7 +6,11 @@
     <div class="rounded-xl flex items-center space-x-6" v-motion-pop-visible :delay="800">
       <div class="p-1 bg-slate-800 rounded-full">
         <div class="p-1 bg-gradient-to-br from-fuchsia-500 to-cyan-400 rounded-full">
-          <img class="h-16 w-16 rounded-full" src="@/assets/avatar.png" alt="A_photo_of_Louie" />
+          <img
+            class="max-h-16 max-w-16 rounded-full"
+            src="@/assets/avatar.png"
+            alt="A_photo_of_Louie"
+          />
         </div>
       </div>
       <div>
