@@ -59,10 +59,6 @@ const route = useRoute();
 
 const menuItems = [
   {
-    title: 'Home',
-    link: '#home'
-  },
-  {
     title: 'Projects',
     link: '#projects'
   },
