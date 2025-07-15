@@ -12,7 +12,7 @@
       </a>
     </div>
     <p class="text-slate-700 flex justify-center my-10">Made with ❤️ and 🎵 by Louie</p>
-    <p class="text-slate-700 flex justify-center my-10">Copyright {{ date.getFullYear() }}</p>
+    <p class="text-slate-700 flex justify-center my-10">{{ date.getFullYear() }}</p>
   </div>
 </template>
 <script setup lang="ts">
