@@ -11,8 +11,8 @@
         <SocialIcon :title="item.title" />
       </a>
     </div>
-    <p class="text-slate-700 flex justify-center my-10">Made with ❤️ and 🎵 by Louie</p>
-    <p class="text-slate-700 flex justify-center my-10">{{ date.getFullYear() }}</p>
+    <p class="text-slate-700 flex justify-center py-10">Made with ❤️ and 🎵 by Louie</p>
+    <p class="text-slate-700 flex justify-center pb-10">{{ date.getFullYear() }}</p>
   </div>
 </template>
 <script setup lang="ts">
