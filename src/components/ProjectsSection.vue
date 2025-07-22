@@ -1,11 +1,11 @@
 <template>
-  <div v-motion-slide-visible-left :delay="300" class="text-5xl font-bold text-white mb-6">
+  <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
     Projects
   </div>
 
   <div class="container grid sm:grid-cols-1 md:grid-cols-3 gap-4">
     <ProjectCard
-      v-motion-pop-visible
+      v-motion-pop-visible-once
       :delay="300 * index"
       v-for="(item, index) in projects"
       v-bind:key="index"

@@ -1,10 +1,10 @@
 <template>
-  <div v-motion-slide-visible-left :delay="300" class="text-5xl font-bold text-white mb-6">
+  <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
     Technologies I use
   </div>
   <div class="container flex flex-wrap justify-center gap-8 text-center cursor-default">
     <div
-      v-motion-pop-visible
+      v-motion-pop-visible-once
       :delay="50 * index"
       v-for="(item, index) in technologies"
       v-bind:key="index"
