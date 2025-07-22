@@ -8,9 +8,12 @@
       :delay="50 * index"
       v-for="(item, index) in technologies"
       v-bind:key="index"
-      class="p-4 bg-slate-900 text-xl text-white rounded-xl hover:font-semibold transition-transform duration-300 hover:scale-110"
     >
-      <p>{{ item.title }}</p>
+      <div
+        class="p-4 bg-slate-900 text-xl text-white rounded-xl hover:font-semibold transition-transform duration-300 hover:scale-110"
+      >
+        <p>{{ item.title }}</p>
+      </div>
     </div>
   </div>
 </template>
