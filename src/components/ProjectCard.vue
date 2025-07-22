@@ -7,20 +7,15 @@
     :class="project.background"
   >
     <div class="flex justify-end px-4 pt-4">
-      <button class="inline-block text-gray-500 text-sm p-1.5" type="button">
+      <a
+        :href="project.link"
+        target="_blank"
+        type="button"
+        class="inline-block text-gray-500 text-sm p-1.5"
+      >
         <span class="sr-only">Open link</span>
-        <svg
-          class="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 16 3"
-        >
-          <path
-            d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
-          />
-        </svg>
-      </button>
+        <ArrowIcon></ArrowIcon>
+      </a>
     </div>
     <div class="p-6 flex flex-col h-full">
       <div class="text-center mb-6">
@@ -48,5 +43,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import ArrowIcon from '@/components/icons/ArrowIcon.vue';
+
 const props = defineProps(['project']);
 </script>
