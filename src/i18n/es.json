@@ -1,0 +1,58 @@
+{
+    "sections": {
+        "projects": "Proyectos",
+        "technologies": "Tecnologías",
+        "about": "Sobre mí",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Hola, soy",
+        "subtitle": "Desarrollador y artista digital.",
+        "subtitle2": "Apasionado por crear y aprender.",
+        "callToAction": "Contáctame"
+    },
+    "projects": {
+        "title": "Proyectos"
+    },
+    "technologies": {
+        "title": "Tecnologías que uso"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "content1": "¡Hola! Mi nombre es Louis y soy un desarrollador full stack graduado en Desarrollo de Software.",
+        "content2": "A lo largo de mi carrera, he trabajado en una amplia variedad de proyectos, desde sitios web simples hasta aplicaciones web complejas.",
+        "content3": "Soy una persona confiable, orientada al detalle, a la que le encanta enfrentar nuevos desafíos y resolver problemas con creatividad.",
+        "content4": "Me apasiona la colaboración y construir soluciones que generen impacto. ¡Creemos algo extraordinario juntos!"
+    },
+    "contact": {
+        "title": "¡Conectemos!",
+        "subtitle": "¿Tenés alguna pregunta o querés saludar? Contactame a través de mis redes sociales."
+    },
+    "errors": {
+        "404": {
+            "title": "Página no encontrada",
+            "message": "Lo sentimos, la página que buscas no existe.",
+            "goBack": "Regresar",
+            "quotes": [
+                "Error 404: El servidor viajó al futuro y aún no volvió.",
+                "¿Probaste apagando y encendiendo la página?",
+                "Esta página se fue a tomar mate. Vuelve después… o no.",
+                "404: El bug está en otra parte.",
+                "Si encuentras esta página, eres developer senior automáticamente.",
+                "Misión fallida. Inténtalo de nuevo, soldado.",
+                "Nivel 404 desbloqueado: La nada.",
+                "¡Has encontrado un error legendario! Muy raro… y muy inútil.",
+                "Esta no es la página que estás buscando — Obi-Wan Kenobi",
+                "404: Thanos la eliminó con un chasquido.",
+                "Sherlock dice que… esta página nunca existió.",
+                "¿404? Nunca oí hablar de esa página.",
+                "¿Qué es una página 404 y por qué hay tantas?",
+                "👾 404: El pixel maestro se perdió en el camino.",
+                "Insert coin to continue… (pero no va a funcionar).",
+                "Parece que este destino no existe en el mapa.",
+                "Esta página funciona en mi máquina.",
+                "Aquí debería haber algo genial… pero no lo hay."
+            ]
+        }
+    }
+}

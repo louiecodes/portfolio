@@ -1,8 +1,13 @@
 <template>
   <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
-    Let's connect!
+    {{ t('contact.title') }}
   </div>
   <div v-motion-slide-visible-once-right :delay="600" class="text-2xl font-bold text-white">
-    Have any questions or just want to say hello? get in touch with me via social media.
+    {{ t('contact.subtitle') }}
   </div>
 </template>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

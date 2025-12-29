@@ -47,7 +47,7 @@
               :class="route.hash === item.link ? 'bg-gray-600' : ''"
               class="block py-2 pl-3 pr-4 text-white rounded-lg md:hover:text-cyan-500"
               aria-current="page"
-              >{{ item.title }}</router-link
+              >{{ t(`sections.${item.title}`) }}</router-link
             >
           </li>
         </ul>
@@ -58,26 +58,28 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
+const { t } = useI18n();
 const route = useRoute();
 const isHomeView = computed(() => route.name === 'HomeView');
 
 const menuItems = [
   {
-    title: 'Projects',
+    title: 'projects',
     link: '#projects'
   },
   {
-    title: 'Technologies',
+    title: 'technologies',
     link: '#tech'
   },
   {
-    title: 'About',
+    title: 'about',
     link: '#about'
   },
   {
-    title: 'Contact',
+    title: 'contact',
     link: '#contact'
   }
 ];

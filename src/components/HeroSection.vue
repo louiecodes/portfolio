@@ -1,17 +1,17 @@
 <template>
   <div class="text-5xl font-bold text-white text-center">
     <div v-motion-slide-visible-once-bottom :delay="300" :duration="500">
-      Hi, I'm
+      {{ t('hero.title') }}
       <span
         class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-pink-500 to-purple-500 animate-text"
         >Louis</span
       >.
     </div>
     <div v-motion-slide-visible-once-bottom :delay="1000" :duration="500">
-      A developer & digital artist.
+      {{ t('hero.subtitle') }}
     </div>
     <div v-motion-slide-visible-once-bottom :delay="2000" :duration="500">
-      Passionate about creating and learning.
+      {{ t('hero.subtitle2') }}
     </div>
 
     <div
@@ -28,8 +28,13 @@
         role="button"
         class="relative inline-flex items-center justify-center px-8 py-4 text-2xl font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 rounded-xl"
       >
-        Get in touch
+        {{ t('hero.callToAction') }}
       </router-link>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

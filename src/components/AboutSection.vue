@@ -1,6 +1,6 @@
 <template>
   <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
-    About me
+    {{ t('about.title') }}
   </div>
   <div class="p-8 bg-slate-900 rounded-xl" v-motion-pop-visible-once :delay="500">
     <div class="rounded-xl flex items-center space-x-6" v-motion-pop-visible-once :delay="800">
@@ -20,23 +20,24 @@
     </div>
     <div v-motion-slide-visible-once-bottom :delay="1000" class="text-xl text-white mt-6 mb-10">
       <p>
-        Hi there! My name is Louis and I am a full stack developer graduated in Software
-        Development.
+        {{ t('about.content1') }}
       </p>
       <br />
       <p>
-        Throughout my career, I've worked on a wide range of projects, from simple websites to
-        complex web applications.
+        {{ t('about.content2') }}
       </p>
       <p>
-        I'm a <i>reliable</i>, <i>detail-oriented</i> team player who loves tackling new challenges
-        and solving problems with creativity.
+        {{ t('about.content3') }}
       </p>
       <br />
       <p>
-        I thrive on collaboration and building solutions that make a difference. Let's create
-        something extraordinary together!
+        {{ t('about.content4') }}
       </p>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

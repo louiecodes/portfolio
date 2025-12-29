@@ -1,6 +1,6 @@
 <template>
   <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
-    Projects
+    {{ t('projects.title') }}
   </div>
 
   <div class="container grid sm:grid-cols-1 md:grid-cols-3 gap-4">
@@ -16,6 +16,9 @@
 </template>
 <script setup lang="ts">
 import ProjectCard from '@/components/ProjectCard.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const projects = [
   {
@@ -41,6 +44,14 @@ const projects = [
     technologies: ['NestJS', 'Vue.js', 'Typescript', 'MySQL'],
     link: 'https://www.webinfo.com.ar/',
     background: 'bg-gradient-to-r from-lime-200 to-yellow-100'
+  },
+  {
+    title: 'Jireh',
+    description: 'Online store for Jireh, a clothing brand specializing in shoes and bags.',
+    technologies: ['WordPress', 'WooCommerce'],
+    link: 'https://www.jireh.com.ar/',
+    background:
+      'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#cdf0ea] via-[#f9f9f9] to-[#f7dbf0]'
   }
 ];
 </script>

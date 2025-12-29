@@ -1,6 +1,6 @@
 <template>
   <div v-motion-slide-visible-once-left :delay="300" class="text-5xl font-bold text-white mb-6">
-    Technologies I use
+    {{ t('technologies.title') }}
   </div>
   <div class="container flex flex-wrap justify-center gap-8 text-center cursor-default">
     <div
@@ -19,6 +19,10 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
 const technologies = [
   {
     title: 'HTML5'
