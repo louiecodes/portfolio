@@ -50,8 +50,22 @@
               >{{ t(`sections.${item.title}`) }}</router-link
             >
           </li>
+          <li class="md:hidden py-2 text-white rounded-lg md:hover:text-cyan-500">
+            <button
+              @click="toggleLanguage"
+              class="px-3 py-1 rounded-lg border text-white text-sm hover:bg-gray-700"
+            >
+              {{ locale === 'es' ? 'EN' : 'ES' }}
+            </button>
+          </li>
         </ul>
       </div>
+      <button
+        @click="toggleLanguage"
+        class="hidden md:block ml-4 px-3 py-1 rounded-lg border text-white text-sm hover:bg-gray-700"
+      >
+        {{ locale === 'es' ? 'EN' : 'ES' }}
+      </button>
     </div>
   </nav>
 </template>
@@ -61,7 +75,7 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 const isHomeView = computed(() => route.name === 'HomeView');
 
@@ -83,4 +97,8 @@ const menuItems = [
     link: '#contact'
   }
 ];
+
+const toggleLanguage = () => {
+  locale.value = locale.value === 'es' ? 'en' : 'es';
+};
 </script>
