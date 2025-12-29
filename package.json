@@ -1,5 +1,11 @@
 {
   "name": "louie-portfolio-vue",
+  "description": "A modern, minimalist portfolio built with Vue.js, TypeScript, TailwindCSS, and Flowbite. It highlights my projects, skills, and development approach with a focus on clean design and responsive user experience.",
+  "author": {
+    "name": "Luis Montero",
+    "email": "lh.montero94@gmail.com",
+    "url": "https://louiecodes.github.io"
+  },
   "version": "0.0.0",
   "private": true,
   "type": "module",
