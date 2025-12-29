@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+import MainLayout from '@/layouts/MainLayout.vue';
+import HomeView from '@/views/HomeView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,8 +8,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    }
+      component: MainLayout,
+      children: [
+        {
+          path: '',
+          name: 'HomeView',
+          component: HomeView
+        }
+      ]
+    },
     // {
     //   path: '/about',
     //   name: 'about',
@@ -17,8 +25,20 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('@/layouts/PlainLayout.vue'),
+      children: [
+        {
+          path: '',
+          name: 'NotFoundView',
+          component: () => import('@/views/NotFound.vue')
+        }
+      ]
+    }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,

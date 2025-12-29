@@ -5,11 +5,15 @@
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white rounded-xl bg-slate-500 backdrop-filter backdrop-blur-lg bg-opacity-30"
     >
-      <router-link to="#home" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <router-link
+        :to="isHomeView ? '#home' : '/'"
+        class="flex items-center space-x-3 rtl:space-x-reverse"
+      >
         <img src="@/assets/logo.png" class="h-8 rounded-full" alt="Louie Logo" />
         <span class="self-center text-2xl font-medium whitespace-nowrap">Louie</span>
       </router-link>
       <button
+        v-if="isHomeView"
         data-collapse-toggle="navbar-default"
         type="button"
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600"
@@ -33,7 +37,7 @@
           />
         </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <div v-if="isHomeView" class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
         >
@@ -53,9 +57,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
+const isHomeView = computed(() => route.name === 'HomeView');
 
 const menuItems = [
   {
