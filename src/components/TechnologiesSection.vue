@@ -45,6 +45,9 @@ const technologies = [
     title: 'Vue'
   },
   {
+    title: 'Nuxt'
+  },
+  {
     title: 'TailwindCSS'
   },
   {
@@ -54,13 +57,22 @@ const technologies = [
     title: 'SQL Server'
   },
   {
+    title: 'PL/SQL'
+  },
+  {
     title: 'MongoDB'
+  },
+  {
+    title: 'Prisma'
   },
   {
     title: 'Git'
   },
   {
     title: 'Github'
+  },
+  {
+    title: 'Docker'
   }
 ];
 </script>
