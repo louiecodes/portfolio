@@ -22,32 +22,25 @@ const { t } = useI18n();
 
 const projects = [
   {
-    title: 'Webmenu',
-    description:
-      'A digital menu and QR solution that helps restaurants and food shops go paperless, ensuring hygiene, instant updates, and an eco-friendly approach.',
+    title: 'webmenu',
     technologies: ['Laravel', 'Framework7', 'MySQL'],
     link: 'https://www.webmenu.com.ar/info.html',
     background: 'bg-gradient-to-r from-yellow-100 to-rose-200'
   },
   {
-    title: 'Webturno',
-    description:
-      'A web and mobile platform that streamlines appointment management for doctors and patients, featuring electronic medical records, notifications, and 24/7 online booking.',
+    title: 'webturno',
     technologies: ['Vue.js', 'Capacitor.js', 'Typescript'],
     link: 'https://webturno.com.ar/c/profesionales.html',
     background: 'bg-gradient-to-r from-emerald-50 to-sky-200'
   },
   {
-    title: 'Webinfo',
-    description:
-      'An app designed to create personalized digital spaces with QR codes, perfect for quickly organizing and sharing information in a visual way.',
+    title: 'webinfo',
     technologies: ['NestJS', 'Vue.js', 'Typescript', 'MySQL'],
     link: 'https://www.webinfo.com.ar/',
     background: 'bg-gradient-to-r from-lime-200 to-yellow-100'
   },
   {
-    title: 'Jireh',
-    description: 'Online store for Jireh, a clothing brand specializing in shoes and bags.',
+    title: 'jireh',
     technologies: ['WordPress', 'WooCommerce'],
     link: 'https://www.jireh.com.ar/',
     background:

@@ -12,7 +12,23 @@
         "callToAction": "Get in touch"
     },
     "projects": {
-        "title": "Projects"
+        "title": "Projects",
+        "webmenu": {
+            "title": "Webmenu",
+            "description": "A digital menu and QR solution that helps restaurants and food shops go paperless, ensuring hygiene, instant updates, and an eco-friendly approach."
+        },
+        "webturno": {
+            "title": "Webturno",
+            "description": "A web and mobile platform that streamlines appointment management for doctors and patients, featuring electronic medical records, notifications, and 24/7 online booking."
+        },
+        "webinfo": {
+            "title": "Webinfo",
+            "description": "An app designed to create personalized digital spaces with QR codes, perfect for quickly organizing and sharing information in a visual way."
+        },
+        "jireh": {
+            "title": "Jireh",
+            "description": "Online store for Jireh, a clothing brand specializing in shoes and bags."
+        }
     },
     "technologies": {
         "title": "Technologies I use"

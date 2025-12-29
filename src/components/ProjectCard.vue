@@ -22,13 +22,13 @@
         <div
           class="text-3xl font-black text-black transition duration-300 translate-y-full group-hover:-translate-y-0 group-hover:text-slate-50"
         >
-          <a :href="project.link" target="_blank">{{ project.title }}</a>
+          <a :href="project.link" target="_blank">{{ t(`projects.${project.title}.title`) }}</a>
         </div>
       </div>
       <div
         class="text-center text-gray-400 mb-10 transition duration-300 opacity-0 -translate-y-10 group-hover:translate-y-0 group-hover:opacity-100"
       >
-        {{ project.description }}
+        {{ t(`projects.${project.title}.description`) }}
       </div>
       <div class="flex flex-wrap mt-auto">
         <div
@@ -44,6 +44,9 @@
 </template>
 <script setup lang="ts">
 import ArrowIcon from '@/components/icons/ArrowIcon.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const props = defineProps(['project']);
 </script>
