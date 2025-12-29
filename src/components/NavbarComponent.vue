@@ -61,6 +61,7 @@
         </ul>
       </div>
       <button
+        v-if="isHomeView"
         @click="toggleLanguage"
         class="hidden md:block ml-4 px-3 py-1 rounded-lg border text-white text-sm hover:bg-gray-700"
       >
