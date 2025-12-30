@@ -72,13 +72,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
 const { t, locale } = useI18n();
 const route = useRoute();
 const isHomeView = computed(() => route.name === 'HomeView');
+
+const savedLang = localStorage.getItem('lang');
+if (savedLang) {
+  locale.value = savedLang;
+} else {
+  localStorage.setItem('lang', locale.value);
+}
 
 const menuItems = [
   {
@@ -98,6 +105,10 @@ const menuItems = [
     link: '#contact'
   }
 ];
+
+watch(locale, (newLang) => {
+  localStorage.setItem('lang', newLang);
+});
 
 const toggleLanguage = () => {
   locale.value = locale.value === 'es' ? 'en' : 'es';
