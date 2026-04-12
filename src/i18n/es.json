@@ -15,19 +15,23 @@
         "title": "Proyectos",
         "webmenu": {
             "title": "Webmenu",
-            "description": "Una solución de menú digital y QR que ayuda a restaurantes y locales gastronómicos a eliminar el papel, asegurando higiene, actualizaciones instantáneas y un enfoque ecológico."
+            "description": "Solución de menú digital y QR que ayuda a restaurantes y locales gastronómicos a eliminar el papel, asegurando higiene, actualizaciones instantáneas y un enfoque ecológico."
         },
         "webturno": {
             "title": "Webturno",
-            "description": "Una plataforma web y móvil que optimiza la gestión de turnos para profesionales y clientes, con historias clínicas, notificaciones y reserva online 24/7."
+            "description": "Plataforma web y app móvil que optimiza la gestión de turnos para profesionales y clientes, con historias clínicas, notificaciones y reserva online 24/7."
         },
         "webinfo": {
             "title": "Webinfo",
-            "description": "Una app diseñada para crear espacios digitales personalizados con códigos QR, ideal para organizar y compartir información de manera visual y rápida."
+            "description": "App diseñada para crear espacios digitales personalizados con códigos QR, ideal para organizar y compartir información de manera visual y rápida."
         },
         "jireh": {
             "title": "Jireh",
             "description": "Tienda online para Jireh, una marca de ropa especializada en zapatos y bolsos."
+        },
+        "money-mochi": {
+            "title": "Money Mochi",
+            "description": "Aplicación de escritorio para el seguimiento de ingresos y gastos, diseñada para ofrecer una experiencia clara, rápida y agradable al gestionar las finanzas personales."
         }
     },
     "technologies": {

@@ -23,19 +23,19 @@ const { t } = useI18n();
 const projects = [
   {
     title: 'webmenu',
-    technologies: ['Laravel', 'Framework7', 'MySQL'],
+    technologies: ['NestJS', 'Vue.js', 'Framework7', 'Prisma', 'MySQL'],
     link: 'https://www.webmenu.com.ar/info.html',
     background: 'bg-gradient-to-r from-yellow-100 to-rose-200'
   },
   {
     title: 'webturno',
-    technologies: ['Vue.js', 'Capacitor.js', 'Typescript'],
+    technologies: ['Vue.js', 'Framework7', 'Typescript', 'Capacitor.js', 'Firebase'],
     link: 'https://webturno.com.ar/c/profesionales.html',
     background: 'bg-gradient-to-r from-emerald-50 to-sky-200'
   },
   {
     title: 'webinfo',
-    technologies: ['NestJS', 'Vue.js', 'Typescript', 'MySQL'],
+    technologies: ['NestJS', 'Vue.js', 'Typescript', 'Prisma', 'MySQL'],
     link: 'https://www.webinfo.com.ar/',
     background: 'bg-gradient-to-r from-lime-200 to-yellow-100'
   },
@@ -45,6 +45,13 @@ const projects = [
     link: 'https://www.jireh.com.ar/',
     background:
       'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#cdf0ea] via-[#f9f9f9] to-[#f7dbf0]'
+  },
+  {
+    title: 'money-mochi',
+    technologies: ['Electron', 'Vue', 'Pinia', 'DaisyUI', 'Drizzle', 'SQLite'],
+    link: 'https://github.com/louiecodes/money-mochi/',
+    background:
+      'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#fbc2eb] to-[#a6c1ee]'
   }
 ];
 </script>
