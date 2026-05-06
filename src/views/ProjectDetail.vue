@@ -46,16 +46,12 @@
         <div class="prose prose-invert max-w-none" v-html="project.content"></div>
       </div>
     </div>
-
-    <div v-else class="text-center text-white">
-      <h1 class="text-2xl">{{ t('projects.notFound') }}</h1>
-    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { marked } from 'marked';
 import ArrowLeftIcon from '@/components/icons/ArrowLeftIcon.vue';
@@ -114,6 +110,7 @@ function parseFrontmatter(markdown: string): Record<string, string | string[]> {
 
 const { t } = useI18n();
 const route = useRoute();
+const router = useRouter();
 const project = ref<Project | null>(null);
 
 onMounted(async () => {
@@ -133,7 +130,7 @@ onMounted(async () => {
       content
     };
   } catch {
-    project.value = null;
+    router.push({ name: 'NotFoundView' });
   }
 });
 </script>
