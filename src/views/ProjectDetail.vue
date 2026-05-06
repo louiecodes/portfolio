@@ -1,48 +1,50 @@
 <template>
-  <div class="min-h-screen bg-slate-800 py-12 px-4">
+  <div class="min-h-screen py-28">
     <div v-if="project" class="max-w-4xl mx-auto">
-      <div class="mb-8">
-        <router-link
-          to="/#projects"
-          class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+      <div class="bg-slate-800 rounded-xl p-8">
+        <div class="mb-8">
+          <router-link
+            to="/#projects"
+            class="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+          >
+            <ArrowLeftIcon class="w-4 h-4 mr-2" />
+            {{ t('projects.back') }}
+          </router-link>
+        </div>
+
+        <h1 class="text-4xl font-bold text-white mb-4">{{ project.title }}</h1>
+
+        <a
+          :href="project.link"
+          target="_blank"
+          class="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6"
         >
-          <ArrowLeftIcon class="w-4 h-4 mr-2" />
-          {{ t('projects.back') }}
-        </router-link>
+          {{ t('projects.visitProject') }}
+          <ArrowIcon class="w-4 h-4 ml-1" />
+        </a>
+
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span
+            v-for="tech in project.technologies"
+            :key="tech"
+            class="px-3 py-1 bg-slate-700 text-white rounded-full text-sm"
+          >
+            {{ tech }}
+          </span>
+        </div>
+
+        <div v-if="project.images.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <img
+            v-for="(img, index) in project.images"
+            :key="index"
+            :src="img"
+            :alt="`${project.title} screenshot ${index + 1}`"
+            class="rounded-lg shadow-lg w-full object-cover"
+          />
+        </div>
+
+        <div class="prose prose-invert max-w-none" v-html="project.content"></div>
       </div>
-
-      <h1 class="text-4xl font-bold text-white mb-4">{{ project.title }}</h1>
-
-      <a
-        :href="project.link"
-        target="_blank"
-        class="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6"
-      >
-        {{ t('projects.visitProject') }}
-        <ArrowIcon class="w-4 h-4 ml-1" />
-      </a>
-
-      <div class="flex flex-wrap gap-2 mb-8">
-        <span
-          v-for="tech in project.technologies"
-          :key="tech"
-          class="px-3 py-1 bg-slate-700 text-white rounded-full text-sm"
-        >
-          {{ tech }}
-        </span>
-      </div>
-
-      <div v-if="project.images.length" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <img
-          v-for="(img, index) in project.images"
-          :key="index"
-          :src="img"
-          :alt="`${project.title} screenshot ${index + 1}`"
-          class="rounded-lg shadow-lg w-full object-cover"
-        />
-      </div>
-
-      <div class="prose prose-invert max-w-none" v-html="project.content"></div>
     </div>
 
     <div v-else class="text-center text-white">
@@ -76,20 +78,34 @@ function parseFrontmatter(markdown: string): Record<string, string | string[]> {
 
   const frontmatterBlock = match[1];
   const result: Record<string, string | string[]> = {};
+  let currentKey = '';
+  const lines = frontmatterBlock.split('\n');
 
-  frontmatterBlock.split('\n').forEach((line) => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex === -1) return;
-
-    const key = line.slice(0, colonIndex).trim();
-    const rawValue = line.slice(colonIndex + 1).trim();
-
-    if (rawValue.startsWith('[') && rawValue.endsWith(']')) {
-      result[key] = rawValue.slice(1, -1).split(',').map((v: string) => v.trim().replace(/^["']|["']$/g, ''));
-    } else if (rawValue.startsWith('"') && rawValue.endsWith('"')) {
-      result[key] = rawValue.slice(1, -1);
+  lines.forEach((line) => {
+    if (line.startsWith('  - ')) {
+      if (currentKey && Array.isArray(result[currentKey])) {
+        (result[currentKey] as string[]).push(line.slice(4).trim());
+      }
     } else {
-      result[key] = rawValue;
+      const colonIndex = line.indexOf(':');
+      if (colonIndex === -1) return;
+
+      const key = line.slice(0, colonIndex).trim();
+      const rawValue = line.slice(colonIndex + 1).trim();
+
+      if (rawValue.startsWith('[') && rawValue.endsWith(']')) {
+        result[key] = rawValue
+          .slice(1, -1)
+          .split(',')
+          .map((v: string) => v.trim().replace(/^["']|["']$/g, ''));
+      } else if (rawValue.startsWith('"') && rawValue.endsWith('"')) {
+        result[key] = rawValue.slice(1, -1);
+      } else if (rawValue === '') {
+        result[key] = [];
+        currentKey = key;
+      } else {
+        result[key] = rawValue;
+      }
     }
   });
 

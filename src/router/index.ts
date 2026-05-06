@@ -28,7 +28,14 @@ const router = createRouter({
     {
       path: '/projects/:slug',
       name: 'ProjectDetail',
-      component: () => import('@/views/ProjectDetail.vue')
+      component: () => import('@/layouts/PlainLayout.vue'),
+      children: [
+        {
+          path: '',
+          name: 'ProjectDetailView',
+          component: () => import('@/views/ProjectDetail.vue')
+        }
+      ]
     },
     {
       path: '/:pathMatch(.*)*',
@@ -44,13 +51,14 @@ const router = createRouter({
     }
   ],
   scrollBehavior(to) {
-    if (to.hash) {
+    if (to.hash && to.name === 'HomeView') {
       return {
         el: to.hash,
         behavior: 'smooth',
         top: 80
       };
     }
+    return { top: 0 };
   }
 });
 
