@@ -1,10 +1,8 @@
 <template>
-  <!-- 
-    class="rounded-xl shadow-lg transition-all duration-300 bg-gradient-to-br from-emerald-200 via-amber-100 to-rose-400 hover:bg-transparent" 
-  -->
   <div
-    class="rounded-xl shadow-lg transition-all duration-300 group border border-transparent hover:from-black hover:to-black hover:border hover:border-white"
+    class="rounded-xl shadow-lg transition-all duration-300 group border border-transparent hover:from-black hover:to-black hover:border hover:border-white cursor-pointer"
     :class="project.background"
+    @click="goToProjectDetail"
   >
     <div class="flex justify-end px-4 pt-4">
       <a
@@ -12,6 +10,7 @@
         target="_blank"
         type="button"
         class="inline-block text-gray-500 text-sm p-1.5"
+        @click.stop
       >
         <span class="sr-only">Open link</span>
         <ArrowIcon></ArrowIcon>
@@ -22,7 +21,7 @@
         <div
           class="text-3xl font-black text-black transition duration-300 translate-y-full group-hover:-translate-y-0 group-hover:text-slate-50"
         >
-          <a :href="project.link" target="_blank">{{ t(`projects.${project.title}.title`) }}</a>
+          {{ t(`projects.${project.title}.title`) }}
         </div>
       </div>
       <div
@@ -43,10 +42,23 @@
   </div>
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 import ArrowIcon from '@/components/icons/ArrowIcon.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+const router = useRouter();
 
-const props = defineProps(['project']);
+const props = defineProps<{
+  project: {
+    title: string;
+    technologies: string[];
+    link: string;
+    background: string;
+  };
+}>();
+
+function goToProjectDetail() {
+  router.push(`/projects/${props.project.title.toLowerCase()}`);
+}
 </script>

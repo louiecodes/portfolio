@@ -1,78 +1,81 @@
 {
-    "sections": {
-        "projects": "Projects",
-        "technologies": "Technologies",
-        "about": "About Me",
-        "contact": "Contact"
+  "sections": {
+    "projects": "Projects",
+    "technologies": "Technologies",
+    "about": "About Me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm",
+    "subtitle": "A developer & digital artist.",
+    "subtitle2": "Passionate about creating and learning.",
+    "callToAction": "Get in touch"
+  },
+  "projects": {
+    "title": "Projects",
+    "back": "Back to Projects",
+    "visitProject": "Visit Project",
+    "notFound": "Project not found",
+    "webmenu": {
+      "title": "Webmenu",
+      "description": "Digital menu and QR solution that helps restaurants and food shops go paperless, ensuring hygiene, instant updates, and an eco-friendly approach."
     },
-    "hero": {
-        "title": "Hi, I'm",
-        "subtitle": "A developer & digital artist.",
-        "subtitle2": "Passionate about creating and learning.",
-        "callToAction": "Get in touch"
+    "webturno": {
+      "title": "Webturno",
+      "description": "Web platform and mobile app that streamlines appointment management for doctors and patients, featuring electronic medical records, notifications, and 24/7 online booking."
     },
-    "projects": {
-        "title": "Projects",
-        "webmenu": {
-            "title": "Webmenu",
-            "description": "Digital menu and QR solution that helps restaurants and food shops go paperless, ensuring hygiene, instant updates, and an eco-friendly approach."
-        },
-        "webturno": {
-            "title": "Webturno",
-            "description": "Web platform and mobile app that streamlines appointment management for doctors and patients, featuring electronic medical records, notifications, and 24/7 online booking."
-        },
-        "webinfo": {
-            "title": "Webinfo",
-            "description": "App designed to create personalized digital spaces with QR codes, perfect for quickly organizing and sharing information in a visual way."
-        },
-        "jireh": {
-            "title": "Jireh",
-            "description": "Online store for Jireh, a clothing brand specializing in shoes and bags."
-        },
-        "money-mochi": {
-            "title": "Money Mochi",
-            "description": "Desktop application for tracking income and expenses, designed to provide a clear, fast, and pleasant experience when managing personal finances."
-        }
+    "webinfo": {
+      "title": "Webinfo",
+      "description": "App designed to create personalized digital spaces with QR codes, perfect for quickly organizing and sharing information in a visual way."
     },
-    "technologies": {
-        "title": "Technologies I use"
+    "jireh": {
+      "title": "Jireh",
+      "description": "Online store for Jireh, a clothing brand specializing in shoes and bags."
     },
-    "about": {
-        "title": "About me",
-        "content1": "Hi there! My name is Louis and I am a full stack developer graduated in Software Development.",
-        "content2": "Throughout my career, I've worked on a wide range of projects, from simple websites to complex web applications.",
-        "content3": "I'm a reliable, detail-oriented team player who loves tackling new challenges and solving problems with creativity.",
-        "content4": "I thrive on collaboration and building solutions that make a difference. Let's create something extraordinary together!"
-    },
-    "contact": {
-        "title": "Let's connect!",
-        "subtitle": "Have any questions or just want to say hello? get in touch with me via social media."
-    },
-    "errors": {
-        "404": {
-            "title": "Page not found",
-            "message": "Sorry, the page you are looking for does not exist.",
-            "goBack": "Go back",
-            "quotes": [
-                "Error 404: The server traveled to the future and hasn’t come back yet.",
-                "Have you tried turning the page off and on again?",
-                "This page went to grab some mate. It’ll be back… or maybe not.",
-                "404: The bug is somewhere else.",
-                "If you find this page, you're automatically a senior developer.",
-                "Mission failed. Try again, soldier.",
-                "404 level unlocked: The void.",
-                "You've found a legendary error! Very rare… and very useless.",
-                "This is not the page you're looking for — Obi-Wan Kenobi",
-                "404: Thanos snapped it out of existence.",
-                "Sherlock says… this page never existed.",
-                "404? Never heard of that page.",
-                "What is a 404 page and why are there so many?",
-                "👾 404: The pixel master got lost on the way.",
-                "Insert coin to continue… (but it won't work).",
-                "It seems this destination doesn’t exist on the map.",
-                "This page works on my machine.",
-                "There should be something cool here... but there isn’t."
-            ]
-        }
+    "money-mochi": {
+      "title": "Money Mochi",
+      "description": "Desktop application for tracking income and expenses, designed to provide a clear, fast, and pleasant experience when managing personal finances."
     }
+  },
+  "technologies": {
+    "title": "Technologies I use"
+  },
+  "about": {
+    "title": "About me",
+    "content1": "Hi there! My name is Louis and I am a full stack developer graduated in Software Development.",
+    "content2": "Throughout my career, I've worked on a wide range of projects, from simple websites to complex web applications.",
+    "content3": "I'm a reliable, detail-oriented team player who loves tackling new challenges and solving problems with creativity.",
+    "content4": "I thrive on collaboration and building solutions that make a difference. Let's create something extraordinary together!"
+  },
+  "contact": {
+    "title": "Let's connect!",
+    "subtitle": "Have any questions or just want to say hello? get in touch with me via social media."
+  },
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "message": "Sorry, the page you are looking for does not exist.",
+      "goBack": "Go back",
+      "quotes": [
+        "Error 404: The server traveled to the future and hasn’t come back yet.",
+        "Have you tried turning the page off and on again?",
+        "This page went to grab some mate. It’ll be back… or maybe not.",
+        "404: The bug is somewhere else.",
+        "If you find this page, you're automatically a senior developer.",
+        "Mission failed. Try again, soldier.",
+        "404 level unlocked: The void.",
+        "You've found a legendary error! Very rare… and very useless.",
+        "This is not the page you're looking for — Obi-Wan Kenobi",
+        "404: Thanos snapped it out of existence.",
+        "Sherlock says… this page never existed.",
+        "404? Never heard of that page.",
+        "What is a 404 page and why are there so many?",
+        "👾 404: The pixel master got lost on the way.",
+        "Insert coin to continue… (but it won't work).",
+        "It seems this destination doesn’t exist on the map.",
+        "This page works on my machine.",
+        "There should be something cool here... but there isn’t."
+      ]
+    }
+  }
 }

@@ -26,6 +26,11 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
     {
+      path: '/projects/:slug',
+      name: 'ProjectDetail',
+      component: () => import('@/views/ProjectDetail.vue')
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: () => import('@/layouts/PlainLayout.vue'),
