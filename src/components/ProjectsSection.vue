@@ -48,8 +48,8 @@ const projects = [
   },
   {
     title: 'money-mochi',
-    technologies: ['Electron', 'Vue', 'Pinia', 'DaisyUI', 'Drizzle', 'SQLite'],
-    link: 'https://github.com/louiecodes/money-mochi/',
+    technologies: ['Electron', 'Vue.js', 'Pinia', 'DaisyUI', 'Drizzle', 'SQLite'],
+    link: 'https://moneymochi.vercel.app/',
     background:
       'bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#fbc2eb] to-[#a6c1ee]'
   }
