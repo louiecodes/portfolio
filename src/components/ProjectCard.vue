@@ -59,6 +59,6 @@ const props = defineProps<{
 }>();
 
 function goToProjectDetail() {
-  router.push(`/projects/${props.project.title.toLowerCase()}`);
+  // router.push(`/projects/${props.project.title.toLowerCase()}`);
 }
 </script>
